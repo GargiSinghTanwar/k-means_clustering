@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning KNN algorithm Deployment</title>
+<meta charset="UTF-8">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+
+h1 {text-align: center;}
+h2 {text-align: center; font-size: 20px;}
+
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+      
+<div class="" style="background-color:rgb(253, 160, 12);" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Summer Internship 2022 on Machine learning and Data Science</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">TRAVELLING ON TITANIC</p></center> 
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >Predict weather you were a survival or not</h2>
+<!-- Main Input For Receiving Query to our ML -->
+
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+
+<div>
+<label for="floatingInput">Enter your age:</label>
+<input type="number" class="form-control" id="age" name="age" step="any" min="0" max="10000" placeholder="0" required="required" style="width:200px ; text-align: center;margin-left: 670px;">
+</div>
+
+<br>
+<div>
+<label for="Gener">Enter Gener:</label>
+  <select name="Gener" id="Gener">
+    <option value=1>Female</option>
+    <option value=0>Male</option>
+  </select>
+  
+  <br><br>
+  <div>
+  <label for="Spending_score">Enter your Spending_score:</label>
+  <input type="number" class="form-control" id="Spending_score" name="Spending_score" step="any" min="0" max="100" placeholder="0" required="required" style="width:200px ; text-align: center;margin-left: 670px;">
+  </div>
+ 
+  <br><br>
+  <div>
+  <label for="Annual_income">Enter your Annual_income:</label>
+  <input type="number" class="form-control" id="Annual_income" name="Annual_income" step="any" min="0" max="200" placeholder="0" required="required" style="width:200px ; text-align: center;margin-left: 670px;">
+  </div>
+ 
+  
+</div>
+<br>
+
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div class="" style="background-color:rgb(241, 135, 6);" >
+<div class="clearfix">
+           
+<div class="col-md-12"> 
+ <center><p style="font-size:25px;color:white;margin-top:20px; font-size: 20px;">Developed by Gargi Singh Tanwar </p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
